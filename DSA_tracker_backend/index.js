@@ -15,8 +15,13 @@ dotenv.config();
 const app = express();
 
 // Middlewares
+// app.use(cors({
+//   origin: [process.env.CLIENT_URL || "http://localhost:3000"],
+//   credentials: true,
+// }));
+
 app.use(cors({
-  origin: [process.env.CLIENT_URL || "http://localhost:3000"],
+  origin: ["https://vercel.com/vermaankush589-5092s-projects/prep-buddy/EfRzpMKrj5on1tT7jA8fspRjWKnj"],
   credentials: true,
 }));
 app.use(express.json());
