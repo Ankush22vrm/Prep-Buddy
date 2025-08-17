@@ -1,8 +1,7 @@
 import api from "../../utils/apiClient";
 
 export const signup = async (formData) => {
-  const res = await api.post("/auth/signup", formData
-   // ,{ headers: { "Content-Type": "multipart/form-data" },}
+  const res = await api.post("/auth/signup", formData,{ headers: { "Content-Type": "multipart/form-data" },}
   );
   return res.data;
 };
