@@ -19,7 +19,7 @@ exports.signup = async (req, res, next) => {
     // Handle profile picture upload
     if (req.files?.profilePic) {
       const file = req.files.profilePic;
-      const tempPath = path.join(__dirname, "../temp", file.name);
+      const tempPath = path.join(__dirname, "/temp", file.name);
 
       // Save the file temporarily
       await file.mv(tempPath);
