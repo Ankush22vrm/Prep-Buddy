@@ -9,6 +9,10 @@ const authRoutes = require("./routes/authRoutes");
 const userRoutes = require("./routes/userRoutes")
 const sheetRoutes = require("./routes/sheetRoutes");
 
+app.use(cors({
+  origin: [process.env.CLIENT_URL, "http://localhost:3000"],
+  credentials: true,
+}));
 
 dotenv.config();
 connectDB();
