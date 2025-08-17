@@ -21,7 +21,9 @@ const app = express();
 // }));
 
 app.use(cors({
-  origin: ["https://vercel.com/vermaankush589-5092s-projects/prep-buddy/EfRzpMKrj5on1tT7jA8fspRjWKnj"],
+  origin: ["https://vercel.com/vermaankush589-5092s-projects/prep-buddy/EfRzpMKrj5on1tT7jA8fspRjWKnj",
+            "http://localhost:3000"
+  ],
   credentials: true,
 }));
 app.use(express.json());
