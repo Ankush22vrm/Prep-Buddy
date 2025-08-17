@@ -14,18 +14,18 @@ dotenv.config();
 
 const app = express();
 
-// Middlewares
-// app.use(cors({
-//   origin: [process.env.CLIENT_URL || "http://localhost:3000"],
-//   credentials: true,
-// }));
-
+Middlewares
 app.use(cors({
-  origin: ["https://prep-buddy-nine.vercel.app",
-            "http://localhost:3000"
-  ],
+  origin: [process.env.CLIENT_URL || "http://localhost:3000"],
   credentials: true,
 }));
+
+// app.use(cors({
+//   origin: ["https://prep-buddy-nine.vercel.app",
+//             "http://localhost:3000"
+//   ],
+//   credentials: true,
+// }));
 app.use(express.json());
 app.use(fileUpload({
   useTempFiles: true,
