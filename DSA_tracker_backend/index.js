@@ -28,6 +28,13 @@ app.use(fileUpload({
 connectDB();
 cloudinaryConnect();
 
+//debugging
+app.use((req, res, next) => {
+  console.log(`[${req.method}] ${req.originalUrl}`, req.body);
+  next();
+});
+
+
 // Routes
 app.use("/auth", authRoutes);
 app.use("/profile", userRoutes);
