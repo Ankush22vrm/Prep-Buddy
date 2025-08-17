@@ -9,20 +9,14 @@ const authRoutes = require("./routes/authRoutes");
 const userRoutes = require("./routes/userRoutes")
 const sheetRoutes = require("./routes/sheetRoutes");
 
-app.use(cors({
-  origin: [process.env.CLIENT_URL, "http://localhost:3000"],
-  credentials: true,
-}));
-
 dotenv.config();
-connectDB();
-cloudinaryConnect();
+
 
 const app = express();
 
 // Middlewares
 app.use(cors({
-  origin: process.env.CLIENT_URL || "http://localhost:3000",
+  origin: [process.env.CLIENT_URL || "http://localhost:3000"],
   credentials: true,
 }));
 app.use(express.json());
@@ -31,7 +25,8 @@ app.use(fileUpload({
   tempFileDir: "/tmp/"
 }));
 
-
+connectDB();
+cloudinaryConnect();
 
 // Routes
 app.use("/app/v1/auth", authRoutes);
