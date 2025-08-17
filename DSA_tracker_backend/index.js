@@ -21,7 +21,7 @@ const app = express();
 // }));
 
 app.use(cors({
-  origin: ["https://prep-buddy-eight.vercel.app",
+  origin: ["https://prep-buddy-nine.vercel.app",
             "http://localhost:3000"
   ],
   credentials: true,
