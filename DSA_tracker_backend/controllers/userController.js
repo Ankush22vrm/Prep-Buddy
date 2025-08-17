@@ -20,7 +20,10 @@ exports.updateProfile = async (req, res, next) => {
 
       // Save uploaded file to temp folder
       const file = req.files.profileImage;
-      const tempPath = path.join(__dirname, "/temp", file.name);
+       // Ensure temp folder exists
+      const tempDir = path.join(__dirname, "temp");
+      if (!fs.existsSync(tempDir)) fs.mkdirSync(tempDir);
+      const tempPath = path.join(tempDir, file.name);
 
       // Move uploaded file to temp folder
       await file.mv(tempPath);
