@@ -20,12 +20,6 @@ app.use(cors({
   credentials: true,
 }));
 
-// app.use(cors({
-//   origin: ["https://prep-buddy-nine.vercel.app",
-//             "http://localhost:3000"
-//   ],
-//   credentials: true,
-// }));
 app.use(express.json());
 app.use(fileUpload({
   useTempFiles: true,
