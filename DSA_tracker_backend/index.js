@@ -29,9 +29,9 @@ connectDB();
 cloudinaryConnect();
 
 // Routes
-app.use("/app/v1/auth", authRoutes);
-app.use("/app/v1/profile", userRoutes);
-app.use("/app/v1/sheets", sheetRoutes);
+app.use("/auth", authRoutes);
+app.use("/profile", userRoutes);
+app.use("/sheets", sheetRoutes);
 
 
 
