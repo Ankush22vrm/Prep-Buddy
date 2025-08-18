@@ -38,13 +38,6 @@ Welcome to **Prep Buddy** — your all-in-one platform to organize DSA prep and 
 
 ---
 
-## 🖼️ Screenshots
-
-
-
-![Dashboard Example](screens/dashboard.png)
-![Sheet Board Example](screens/sheetboard.png)
-
 ---
 
 ## 🛠️ Tech Stack
