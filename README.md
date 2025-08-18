@@ -109,9 +109,6 @@ We welcome enhancements and bug fixes!
 
 ---
 
-## 📝 License
-
-MIT © 2025 Ankush Verma
 
 ---
 
